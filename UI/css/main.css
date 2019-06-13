@@ -506,3 +506,59 @@ padding: 4em 1em;
   background-color: #aa0000ff;
   color: white;
 }
+.AdForm{
+	margin: 0px;
+    padding: 0px;
+	display: block;
+	text-align: center;
+}
+.Showroom button{
+	padding: 6px;
+margin-right: 16px;
+background: white;
+color:#aa0000ff;
+font-size: 17px;
+border: none;
+cursor: pointer;	
+box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+border-radius:1%;
+}
+#bodywrap{
+	margin-top: 1%;
+	width: 100%;
+    margin: 0px auto 90px;
+    overflow: hidden;
+	text-align: left;
+    font-style: normal;
+    font-weight: normal;
+	padding: 0;
+	display: block;
+}
+#content{
+	width: 65%;
+    padding-left: 0;
+	overflow: hidden;
+	    margin: 0 auto;
+		text-align: left;
+    font-style: normal;
+    font-weight: normal;
+	    padding: 0;
+		    display: block;
+}
+#details{
+	margin: 0 0 20px;
+	    text-align: left;
+    font-style: normal;
+    font-weight: normal;
+	padding: 0;
+	    display: block;
+}
+#detailsleft{
+	width: 30%;
+	text-align: left;
+    font-style: normal;
+    font-weight: normal;
+	margin: 0;
+    padding: 0;
+	display: block;
+}
