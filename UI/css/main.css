@@ -1,5 +1,7 @@
 body{
 	background-color:white;
+	-webkit-box-direction: normal;
+	font-family: "Source Sans Pro",Helvetica,Arial,sans-serif;
 }
 .PageContainer{
 	width:100%;
@@ -16,6 +18,14 @@ body{
 	overflow: hidden;
 	border-radius:1%;
 }
+.Siteboxcred{
+	width:45%;
+	height:45%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+	box-sizing: border-box;
+	overflow: hidden;
+	border-radius:1%;
+}
 .logo{
 	float:left;
 }
@@ -27,16 +37,15 @@ body{
 	}
 .searchform{
 	float:left;
+	margin-left:30%;
 }
 .searchform input{
-  padding: 6px;
-  font-size: 17px;
-  border: none;
-  width: 30%;
-  background: #e6e6e6ff;
-  -webkit-transition: width 0.4s ease-in-out;
-  transition: width 0.4s ease-in-out;
-  border-radius:1%;
+	padding: 0 12px;
+	height:32px;
+	outline:none;
+	border:1px solid rgba(0,0,0,.12);
+	border-radius:2px;
+	background:#fff;
 }
 .searchform input:focus{
 	width: 50%;
@@ -45,8 +54,8 @@ body{
 .searchform button{
 padding: 6px;
 margin-right: 16px;
-background: #aa0000ff;
-color:white;
+background: white;
+color:#aa0000ff;
 font-size: 17px;
 border: none;
 cursor: pointer;	
@@ -54,7 +63,7 @@ box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 border-radius:1%;
 }
 .searchform button:hover{
-  background: #ffaaaaff;
+  background: #ffaaaff;
   border-radius:1%;
 }
 .searchform::after{
@@ -63,130 +72,143 @@ border-radius:1%;
   display: table;
   border-radius:1%;
 }
-.LoginContainer{
-	background:f9f9f9ff;
-	float:right;
-	border-radius:1%;
+.CredContainer{
+	padding: 4em 1em;
+	overflow:hidden;
+	display: block;
+	background: white;
+    text-shadow: none;
+	color: crimson;
+	background-image: url(../asset/nissanmicra.jpg);
+
+	
 }
-.LoginContainer input{
-  padding: 6px;
-  font-size: 17px;
-  border: none;
-  width: 30%;
-  background: #e6e6e6ff;
-  border-radius:1%;
+.CredContainerChild1{
+	margin: 0 auto;
+    max-width: 890px;
+    position: relative;
+	    display: block;
+		overflow: hidden;
+    padding: 0 1em;
+    word-wrap: break-word;
 }
-.LoginContainer input:focus{
-  width: 40%;
-  -webkit-transition: width 0.4s ease-in-out;
-  transition: width 0.4s ease-in-out;
-  border-radius:1%;
+.CredContainer :after :before{
+    box-sizing:border-box;
 }
-.LoginContainer button{
+form{
+	display:block;
+	margin-top:0em;
+}
+
+#loginboxhead{
+position:relative;
+padding-right:20px;
+padding-left:20px;	
+}
+#loginboxbody{
+position:relative;
+padding-right:20px;
+padding-left:20px;	
+}
+.loginrow1{
+	position:relative;
+	margin-bottom:8px;
+}
+.loginrow2{
+	position:relative;
+	margin-bottom:8px;
+}
+.loginrow2 button{
 padding: 6px;
 margin-right: 16px;
-background: #aa0000ff;
-color:white;
+background: white;
+color:#aa0000ff;
 font-size: 17px;
 border: none;
 cursor: pointer;	
 box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 border-radius:1%;
 }
-.LoginContainer button:hover{
-  background: #ffaaaaff;
-  border-radius:1%;
-}
-#signup{
-	float:left;
-	border-radius:1%;
-}
-.modal-content input[type=text], input[type=password] {
-  width: 80%;
-  margin: 5% auto 15% auto;
-  border: none;
-  background: #f1f1f1;
-  border-radius:1%;
-}
-.modal {
-  display: none; 
-  position: fixed;
-  z-index: 1; 
-  left: 0;
-  top: 0;
-  width: 100%; 
-  height: 100%; 
-  overflow: auto; 
-  background-color: #474e5d;
-  padding-top: 50px;
+.loginrow2 button:hover{
+	 background: #ffaaaff;
   border-radius:1%;
 }	
-.modal-content{
-  background-color: #fefefe;
-  margin: 15% auto;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  width: 80%;
-  font-family: Arial, Helvetica, sans-serif;
-  box-sizing: border-box;
-  border-radius:1%;
+#loginboxlogin{
+	padding: 0 12px;
+	height:32px;
+	outline:none;
+	border:1px solid rgba(0,0,0,.12);
+	border-radius:2px;
+	background:#fff;
 }
-.signincontainer {
-  padding: 16px;
-  border-radius:1%;
+#logincontrol{
+	margin-bottom:4px;
+	position:relative;
 }
-hr {
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  margin-bottom: 25px;
-  border-radius:1%;
+#logincontrol2{
+	opacity:0;
+	cursor:pointer;
+	position:absolute;
+	left:0;
+	display:block;
+	margin:0;
+	padding:0;
+	width:100%;
+	top:0;
+	height:100%;
 }
-.clearfix::after {
-  content: "";
-  clear: both;
-  display: table;
+#password{
+	padding: 0 12px;
+	height:32px;
+	outline:none;
+	border:1px solid rgba(0,0,0,.12);
+	border-radius:2px;
+	background:#fff;
 }
-.cancelbtn, .signupbtn {
-  float: left;
-  width: 50%;
+#exceptions{
+	margin-bottom:20px;
+	position:relative;
+	display:block;
+	color:#aa0000ff		
 }
-.cancelbtn, .signupbtn:hover {
-  background: #ffaaaaff;
-  border-radius:1%;
+#remember{
+	margin:3px 3px 3px 4px;
+	-webkit-appearance: checkbox;
+}
+#signup{
+	color:#aa0000ff;
+	text-decoration:none;
+	cursor:pointer;
+}
+	
 
-}
-
-.cancelbtn {
-  padding: 14px 20px;
-}
-.modal-content button {
-  color: white;
-  padding: 14px 20px;
-  margin: 8px 0;
-  border: none;
-  cursor: pointer;
-  width: 100%;
-  opacity: 0.9;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  border-radius:1%;
-}
-.modal-content button:hover {
-  opacity:0.5;
-  border-radius:1%;
-}
 #copyright{
 	position:relative; 
 	bottom: 10px;
 	left: 600px;
 }
 .column {
+	@media (min-width: 504px)
   float: left;
-  width: 40%;
-  padding: 10px 8px;
+  width: 25%;
+  margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font-weight: 400;
+    vertical-align: baseline;
+       order: 1;
+	   display: block;
+    text-align: -webkit-match-parent;
+	  
 }
 .row {margin: 0 -5px;
-     border-radius:1%; }
+     display:inline;
+	 border-radius:1%; 
+	 }
 .row:after {
   content: "";
-  display: table;
+  display: inline;
   clear: both;
 }
 .card {
@@ -196,20 +218,19 @@ hr {
   background-color: #f1f1f1;
   border: 10px solid hsla(0,0%,100%,.5);
   background-clip: padding-box;
-  border-radius:1%;
-  cursor:pointer;
+  border-radius:1%; 
+  float:left;
 }
-.card img:hover{
-	-ms-transform: scale(1.5); 
-  -webkit-transform: scale(1.5); 
-  transform: scale(1.5);
+.card img{
+	max-width:100%;
+	max-height:100%;
 }
-
-@media screen and (max-width: 600px) {
+@media screen and (max-width: 100%) {
   .column {
     width: 100%;
     display: block;
     margin-bottom: 20px;
+	
   }
 }
 .close {
@@ -221,6 +242,17 @@ hr {
 .containerTab{
 	padding: 10px;
 }
+.containerTab button{
+padding: 6px;
+margin-right: 16px;
+background: white;
+color:#aa0000ff;
+font-size: 17px;
+border: none;
+cursor: pointer;	
+box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+border-radius:1%;
+}
 .closebtn {
   float: right;
   color: black;
@@ -230,10 +262,247 @@ hr {
 .card img{
 	width:100%;
 	height:100%;
-	border-radius:10%;
+	border-radius:1%;
+	cursor:pointer;
 }
 .AdCore img{
 	width:100%;
 	height:100%;
 	border-radius:1%;
+}
+.frame {
+	float:left;
+	width:40%;
+	padding:10px
+}
+.upframe{
+	content: "";
+	display: block;
+	clear: both;
+}
+.frame2{
+		float:right;
+	width:50%;
+	padding:10px
+}
+.ColumnModal{
+  display: none;
+  position: fixed;
+  z-index: 1;
+  padding-top: 100px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+}
+.ColumnModalContent{
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+}
+.AdPicContainer{
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+  height:50%;
+}
+.AdDescription{
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+  height:50%;	
+}
+.containerTab button{
+	
+}
+.login{
+	padding: 0 12px;
+	height:32px;
+	outline:none;
+	border:1px solid rgba(0,0,0,.12);
+	border-radius:2px;
+	background:#fff;
+	float:left;
+}
+.login input{
+	padding: 0 12px;
+	height:32px;
+	outline:none;
+	border:1px solid rgba(0,0,0,.12);
+	border-radius:2px;
+	background:#fff;
+}
+.login input :focus{
+	width: 50%;
+	border-radius:0%;
+}
+
+.login button{
+padding: 6px;
+margin-right: 16px;
+background: white;
+color:#aa0000ff;
+font-size: 17px;
+border: none;
+cursor: pointer;	
+box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+border-radius:1%;
+float:right;
+}
+.marketplace{
+	padding: 0;
+	max-width: 1170px;
+    margin: 32px auto 0;
+	overflow: auto;
+	display: block;
+	border: 0;
+    font-size: 100%;
+    font-weight: 400;
+    vertical-align: baseline;
+}
+.CarWrapper{
+	padding-bottom: 24px;
+    border-bottom: 1px solid #e1e1e1;
+    margin-bottom: 24px;
+	margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font-weight: 400;
+    vertical-align: baseline;
+	display:block;
+}
+.Showroom{
+	display: flex;
+    flex-flow: row wrap;
+    flex-wrap: wrap;
+    line-height: 36px;
+    overflow-x: hidden;
+	    list-style: none;
+		margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font-weight: 400;
+    vertical-align: baseline;
+	margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 40px;
+}
+
+.Sitebox1 button{
+	padding: 6px;
+margin-right: 16px;
+margin-top: 0;
+background: white;
+color:#aa0000ff;
+font-size: 17px;
+border: none;
+cursor: pointer;	
+box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+border-radius:1%;
+float:right;
+}
+
+.PageContainer button{
+	padding: 6px;
+margin-right: 16px;
+margin-top: 0;
+background: white;
+color:#aa0000ff;
+font-size: 17px;
+border: none;
+cursor: pointer;	
+box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+border-radius:1%;
+float:right;
+}
+.CredForm{
+	margin: 0 auto;
+    max-width: 440px;
+	display: block;
+	box-shadow:2px 2px 2px 2px;
+}
+.SignUpForm{
+	min-width:30%;
+	min-height:60%;
+	box-shadow:2px 2px 2px 2px;
+}
+.SignUpForm input{
+		padding: 0 12px;
+		
+	height:32px;
+	outline:none;
+	border:1px solid rgba(0,0,0,.12);
+	border-radius:2px;
+	background:#fff;
+}
+.SignUpForm input :focus{
+	width: 50%;
+	border-radius:0%;
+}
+.SignUpForm button {
+	padding: 6px;
+margin-right: 40%;
+background: white;
+color:#aa0000ff;
+font-size: 17px;
+border: none;
+cursor: pointer;	
+box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+border-radius:1%;
+}
+@media only screen and (max-width: 768px){
+	.card{
+		width: 100%
+}
+.CarAdForm{
+padding: 4em 1em;
+	overflow:hidden;
+	display: block;
+	background: white;
+    text-shadow: none;
+	color: crimson;
+
+}
+.CarAdFormOwnerIdentity{
+	margin: 0 auto;
+    max-width: 890px;
+    position: relative;
+	    display: block;
+		overflow: hidden;
+    padding: 0 1em;
+    word-wrap: break-word;
+}
+.CarAdFormVehicle{
+	margin: 0 auto;
+    max-width: 440px;
+	display: block;
+	
+}
+.topnav{
+	overflow:hidden;
+	background-color:white;
+}
+.topnav a{
+	float: left;
+  color: #aa0000ff;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+.topnav a:hover {
+  background-color: #aa0000ff;
+  color: white;
+}
+.topnav a.active {
+  background-color: #aa0000ff;
+  color: white;
 }
