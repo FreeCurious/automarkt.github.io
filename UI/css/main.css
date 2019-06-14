@@ -18,23 +18,9 @@ body{
 	overflow: hidden;
 	border-radius:1%;
 }
-.Siteboxcred{
-	width:45%;
-	height:45%;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-	box-sizing: border-box;
-	overflow: hidden;
-	border-radius:1%;
-}
 .logo{
 	float:left;
 }
-.Sitebox2{
-	float:right;
-	display:flex;
-	flex-flow:column wrap;
-	border-radius:1%;
-	}
 .searchform{
 	float:left;
 	margin-left:30%;
@@ -72,6 +58,150 @@ border-radius:1%;
   display: table;
   border-radius:1%;
 }
+.login{
+	padding: 0 12px;
+	height:32px;
+	outline:none;
+	border:1px solid rgba(0,0,0,.12);
+	border-radius:2px;
+	background:#fff;
+	float:left;
+}
+.login input{
+	padding: 0 12px;
+	height:32px;
+	outline:none;
+	border:1px solid rgba(0,0,0,.12);
+	border-radius:2px;
+	background:#fff;
+}
+.login input :focus{
+	width: 50%;
+	border-radius:0%;
+}
+
+.login button{
+padding: 6px;
+margin-right: 16px;
+background: white;
+color:#aa0000ff;
+font-size: 17px;
+border: none;
+cursor: pointer;	
+box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+border-radius:1%;
+float:right;
+}
+.marketplace{
+	padding: 0;
+	max-width: 1170px;
+    margin: 32px auto 0;
+	overflow: auto;
+	display: block;
+	border: 0;
+    font-size: 100%;
+    font-weight: 400;
+    vertical-align: baseline;
+}
+.RangeSlide{
+	width: 40%;
+}
+.slider{
+	 -webkit-appearance: none;
+  appearance: none;
+  width: 100%;
+  height: 25px;
+  background: #d3d3d3;
+  outline: none;
+  opacity: 0.7;
+  color:#aa0000ff;
+  -webkit-transition: .2s;
+  transition: opacity .2s;
+}
+.slider:hover{
+	opacity:1;
+}
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 25px;
+  height: 25px;
+  background: #aa0000ff;
+  cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+  width: 25px;
+  height: 25px;
+  background: #4CAF50;
+  cursor: pointer;
+}.UserAdmin {
+  display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.UserAdmin input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: #eee;
+}
+.Loginsuccess{
+	background:white;
+	min-width:30%;
+	min-height:60%;
+	box-shadow:2px 2px 2px 2px;
+	text-align:center;
+}
+.UserAdmin:hover input ~ .checkmark {
+  background-color: #ccc;
+}
+.UserAdmin input:checked ~ .checkmark {
+  background-color: #aa0000ff;
+}
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+.UserAdmin input:checked ~ .checkmark:after {
+  display: block;
+}
+.UserAdmin .checkmark:after {
+  left: 9px;
+  top: 5px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 3px 3px 0;
+  -webkit-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.Sitebox2{
+	float:right;
+	display:flex;
+	flex-flow:column wrap;
+	border-radius:1%;
+	}
+
 .CredContainer{
 	padding: 4em 1em;
 	overflow:hidden;
@@ -79,9 +209,7 @@ border-radius:1%;
 	background: white;
     text-shadow: none;
 	color: crimson;
-	background-image: url(../asset/nissanmicra.jpg);
-
-	
+	background-image: url(../assets/nissanmicra.jpg) ;
 }
 .CredContainerChild1{
 	margin: 0 auto;
@@ -95,6 +223,33 @@ border-radius:1%;
 .CredContainer :after :before{
     box-sizing:border-box;
 }
+.UserAdmin{display: block;
+  position: relative;
+  padding-left: 35px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 22px;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;}
+.UserAdmin input {
+position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+.checkmark{
+	position: absolute;
+  top: 0;
+  left: 0;
+  height: 25px;
+  width: 25px;
+  background-color: #eee;
+}
+
+  
 form{
 	display:block;
 	margin-top:0em;
@@ -319,51 +474,8 @@ border-radius:1%;
 .containerTab button{
 	
 }
-.login{
-	padding: 0 12px;
-	height:32px;
-	outline:none;
-	border:1px solid rgba(0,0,0,.12);
-	border-radius:2px;
-	background:#fff;
-	float:left;
-}
-.login input{
-	padding: 0 12px;
-	height:32px;
-	outline:none;
-	border:1px solid rgba(0,0,0,.12);
-	border-radius:2px;
-	background:#fff;
-}
-.login input :focus{
-	width: 50%;
-	border-radius:0%;
-}
 
-.login button{
-padding: 6px;
-margin-right: 16px;
-background: white;
-color:#aa0000ff;
-font-size: 17px;
-border: none;
-cursor: pointer;	
-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-border-radius:1%;
-float:right;
-}
-.marketplace{
-	padding: 0;
-	max-width: 1170px;
-    margin: 32px auto 0;
-	overflow: auto;
-	display: block;
-	border: 0;
-    font-size: 100%;
-    font-weight: 400;
-    vertical-align: baseline;
-}
+
 .CarWrapper{
 	padding-bottom: 24px;
     border-bottom: 1px solid #e1e1e1;
@@ -394,6 +506,20 @@ float:right;
     margin-inline-start: 0px;
     margin-inline-end: 0px;
     padding-inline-start: 40px;
+	
+}
+.Showroom button{
+	padding: 6px;
+margin-right: 16px;
+margin-top: 0;
+background: white;
+color:#aa0000ff;
+font-size: 17px;
+border: none;
+cursor: pointer;	
+box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+border-radius:1%;
+float:right;
 }
 
 .Sitebox1 button{
@@ -427,7 +553,7 @@ float:right;
 	margin: 0 auto;
     max-width: 440px;
 	display: block;
-	box-shadow:2px 2px 2px 2px;
+	box-shadow:1px 1px 1px 1px;
 }
 .SignUpForm{
 	min-width:30%;
@@ -505,60 +631,4 @@ padding: 4em 1em;
 .topnav a.active {
   background-color: #aa0000ff;
   color: white;
-}
-.AdForm{
-	margin: 0px;
-    padding: 0px;
-	display: block;
-	text-align: center;
-}
-.Showroom button{
-	padding: 6px;
-margin-right: 16px;
-background: white;
-color:#aa0000ff;
-font-size: 17px;
-border: none;
-cursor: pointer;	
-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-border-radius:1%;
-}
-#bodywrap{
-	margin-top: 1%;
-	width: 100%;
-    margin: 0px auto 90px;
-    overflow: hidden;
-	text-align: left;
-    font-style: normal;
-    font-weight: normal;
-	padding: 0;
-	display: block;
-}
-#content{
-	width: 65%;
-    padding-left: 0;
-	overflow: hidden;
-	    margin: 0 auto;
-		text-align: left;
-    font-style: normal;
-    font-weight: normal;
-	    padding: 0;
-		    display: block;
-}
-#details{
-	margin: 0 0 20px;
-	    text-align: left;
-    font-style: normal;
-    font-weight: normal;
-	padding: 0;
-	    display: block;
-}
-#detailsleft{
-	width: 30%;
-	text-align: left;
-    font-style: normal;
-    font-weight: normal;
-	margin: 0;
-    padding: 0;
-	display: block;
 }
